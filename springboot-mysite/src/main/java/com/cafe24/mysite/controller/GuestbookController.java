@@ -71,4 +71,10 @@ public class GuestbookController {
 		return "redirect:/guestbook";
 	}
 	
+	//guestbook ajax 페이지 이동
+	@RequestMapping("/timeline")
+	public String timeline() {
+		return "guestbook/index-timeline";
+	}
+	
 }
