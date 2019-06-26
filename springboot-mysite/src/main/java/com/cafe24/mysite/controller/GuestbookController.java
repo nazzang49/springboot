@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cafe24.mysite.dto.JSONResult;
 import com.cafe24.mysite.service.GuestbookService;
 import com.cafe24.mysite.vo.GuestBookVO;
 
@@ -73,8 +76,8 @@ public class GuestbookController {
 	
 	//guestbook ajax 페이지 이동
 	@RequestMapping("/timeline")
-	public String timeline() {
+	public String timeline(Model model) {
+		model.addAttribute("guestbookList",guestbookService.getList());
 		return "guestbook/index-timeline";
 	}
-	
 }

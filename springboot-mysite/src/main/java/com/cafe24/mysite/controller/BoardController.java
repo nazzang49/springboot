@@ -263,12 +263,6 @@ public class BoardController {
 		return "board/modify";
 	}
 	
-	//댓글 삭제
-//	@RequestMapping("/comment/delete")
-//	public String delete(@RequestParam (value="no", required=true, defaultValue="0") Long no) {
-//		
-//		
-//		
-//	}
+	
 		
 }
